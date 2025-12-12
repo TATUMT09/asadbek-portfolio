@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Asadbek Sunnatov — Premium Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+<div class="gradient-bg"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <img src="profile.png" class="avatar" alt="Asadbek">
+      <div>
+        <h1>Asadbek Sunnatov</h1>
+        <p class="muted">Backend Developer • AI • Telegram Bots • Computer Vision</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact" class="cta">Contact</a>
+    </nav>
+    <button id="nav-toggle" class="nav-toggle">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <h2>Salom! Men <span class="accent">Asadbek</span></h2>
+      <h3>Men backend tizimlar, AI, real-time Telegram botlar va Face Recognition loyihalarini yaratuvchi dasturchiman.</h3>
+      <p class="lead">Spring Boot • Kotlin • Telegram API • OpenCV • PostgreSQL • React</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn primary">Portfolio</a>
+        <a href="#contact" class="btn ghost">Bog‘lanish</a>
+      </div>
+    </div>
+
+    <div class="showcase-card">
+      <h4>So‘nggi loyihalar:</h4>
+      <ul>
+        <li>Telegram Quiz Bot — Real Test Mode</li>
+        <li>Face Attendance System</li>
+        <li>Anonim Ovoz Berish Tizimi</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="container about" id="about">
+  <h2>Men haqimda</h2>
+  <p>
+    Men backend arxitektura, Telegram botlar, AI integratsiya, CV (Face Recognition) va zamonaviy web xizmatlar yaratishda tajribaga egaman.
+    Ishlarimda barqarorlik, optimallik va professional struktura asosiy o‘rinda turadi.
+  </p>
+
+  <div class="stats-3">
+    <div><span>20+</span>Loyihalar</div>
+    <div><span>1+</span>Yillik tajriba</div>
+    <div><span>50k+</span>Kod satrlari</div>
+  </div>
+</section>
+
+<section class="container skills" id="skills">
+  <h2>Ko‘nikmalarim</h2>
+  <div class="skill-grid">
+    <div class="skill">Spring Boot</div>
+    <div class="skill">Kotlin</div>
+    <div class="skill">Java</div>
+    <div class="skill">PostgreSQL</div>
+    <div class="skill">React</div>
+    <div class="skill">Telegram Bot API</div>
+    <div class="skill">OpenCV</div>
+    <div class="skill">REST API</div>
+    <div class="skill">Docx Parser</div>
+    <div class="skill">PDF Generator</div>
+    <div class="skill">Unit Testing</div>
+    <div class="skill">Web Deploy (basic)</div>
+  </div>
+  <p class="note">Eslatma: Docker va CI/CD haqida siz ilgari "bilmayman" deb aytgansiz, shuning uchun ular bu yerda keltirilmagan. Agar o‘rganishni xohlasangiz, men o‘rgatib, loyihalarga qo‘shib beraman.</p>
+</section>
+
+<section class="container projects" id="projects">
+  <h2>Portfolio — Loyihalar</h2>
+  <div class="project-grid">
+
+    <article class="project-card">
+      <h3>Telegram Quiz Bot 2.0</h3>
+      <p>To‘liq DOCX validator, 30/50/100 savol rejimlari, PDF sertifikat, admin panel bilan integratsiya.</p>
+      <span class="meta">Kotlin • Spring Boot • PostgreSQL</span>
+    </article>
+
+    <article class="project-card">
+      <h3>Face Attendance System</h3>
+      <p>Real-time yuz aniqlash, Spring Boot backend, statistik kuzatuv paneli.</p>
+      <span class="meta">Python • OpenCV • Spring Boot</span>
+    </article>
+
+    <article class="project-card">
+      <h3>Anonim Ovoz Berish Tizimi</h3>
+      <p>
+        Ushbu loyiha — anonim ovoz berish tizimi. Foydalanuvchilar kim ovoz berganini ko‘rmaydi; 
+        natija sifatida sondagi javoblar ko‘rsatiladi: "<strong>Ha</strong> / <strong>Yo‘q</strong> / <strong>Bilmayman</strong>".
+        Bu sistemada ovozlar shaxsiyati saqlanadi — faqat yig‘ilgan natija qat'iy ko‘rsatiladi.
+      </p>
+      <span class="meta">React • Spring Boot • PostgreSQL</span>
+    </article>
+
+    <article class="project-card">
+      <h3>Library Management System</h3>
+      <p>Kitoblar, mualliflar, o‘quvchilar va statistikalar uchun professional CRUD tizim.</p>
+      <span class="meta">Kotlin • JPA • SQL</span>
+    </article>
+
+  </div>
+</section>
+
+<section class="container contact" id="contact">
+  <h2>Bog‘lanish</h2>
+
+  <div class="contact-grid">
+    <div>
+      <p><strong>Telegram:</strong> <a href="https://t.me/sunnatov_03">@sunnatov_03</a></p>
+      <p><strong>Email:</strong> <a href="mailto:sunnatovasadbek004@gmail.com">sunnatovasadbek004@gmail.com</a></p>
+      <p><strong>Telefon:</strong> <a href="tel:+998884088803">+998 88 408 88 03</a></p>
+    </div>
+
+    <form id="contact-form" class="contact-form">
+      <label>Ism<input type="text" name="name" required></label>
+      <label>Email<input type="email" name="email" required></label>
+      <label>Xabar<textarea name="msg" rows="5" required></textarea></label>
+      <button type="submit" class="btn primary">Yuborish</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>© 2025 Asadbek Sunnatov — Premium Portfolio Website</p>
+</footer>
+
+</body>
+</html>
