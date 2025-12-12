@@ -163,3 +163,49 @@ body{
   .nav{ display:none; }
   .nav-toggle{ display:block; }
 }
+/* --- MOBILE FIXES --- */
+@media (max-width: 768px) {
+  
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content h2 {
+    font-size: 26px;
+  }
+
+  .hero-content h3 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .lead {
+    font-size: 14px;
+  }
+
+  .showcase-card {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  #nav-toggle {
+    display: block;
+  }
+
+  .about p,
+  .skills,
+  .projects,
+  .contact {
+    text-align: center;
+  }
+}
