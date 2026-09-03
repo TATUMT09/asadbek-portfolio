@@ -140,6 +140,9 @@ h2.sec{font-family:"Space Grotesk";font-weight:700;font-size:clamp(26px,4vw,38px
 .card-badge.new{color:var(--teal-soft);background:rgba(37,217,196,.1);border-color:rgba(37,217,196,.3)}
 .card h3{font-family:"Space Grotesk";font-size:19px;font-weight:600;margin-bottom:6px}
 .card .meta{font-family:"JetBrains Mono";font-size:11px;color:var(--teal-soft);margin-bottom:12px}
+.card-live{display:inline-flex;align-items:center;gap:6px;font-family:"JetBrains Mono";font-size:11px;font-weight:600;color:var(--gold);background:rgba(226,180,85,.1);border:1px solid rgba(226,180,85,.3);padding:4px 10px;border-radius:20px;margin:-6px 0 12px;width:fit-content;transition:.2s}
+.card-live:hover{background:rgba(226,180,85,.2);border-color:var(--gold)}
+.card-live .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2.4s infinite}
 .card .desc{font-size:13.5px;color:var(--muted);margin-bottom:16px;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .card .tags{display:flex;flex-wrap:wrap;gap:6px}
 .card .tags span{font-family:"JetBrains Mono";font-size:10px;color:#9fb0c4;background:rgba(255,255,255,.04);border:1px solid var(--line);padding:3px 8px;border-radius:6px}
@@ -579,8 +582,8 @@ const PROJECTS = [
     },
   },
   {
-    id:"tadbirlar", ic:"assets/tadbirlar-photo.jpg", icPhoto:true, cat:["fullstack"], badge:{uz:"Full-Stack", en:"Full-Stack"}, badgeType:"",
-    title:{uz:"TripDay — Tadbirlar va sayohat platformasi", en:"TripDay — Events & Travel Platform"},
+    id:"tadbirlar", ic:ICONS.map, liveUrl:"https://worldtour.uz", cat:["fullstack"], badge:{uz:"Full-Stack", en:"Full-Stack"}, badgeType:"",
+    title:{uz:"WorldTour — Tadbirlar va sayohat platformasi", en:"WorldTour — Events & Travel Platform"},
     meta:"React · TypeScript · Vite · Kotlin/Spring Boot",
     desc:{
       uz:"Samarqand bo'yicha tadbirlar, mehmonxonalar, diqqatga sazovor joylar va milliy taomlarni bir joyda jamlagan sayohat platformasi. Ko'p tilli interfeys (UZ/RU/EN) va foydalanuvchi ro'yxatdan o'tish tizimi bilan.",
@@ -660,6 +663,7 @@ function renderProjects(){
       </div>`}
       <h3>${p.title[lang]}</h3>
       <div class="meta">${p.meta}</div>
+      ${p.liveUrl ? `<a class="card-live" href="${p.liveUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation()"><span class="dot"></span>${lang==='uz'?'Jonli sayt':'Live site'} ↗</a>` : ""}
       <div class="desc">${p.desc[lang]}</div>
       <div class="tags">${p.tags.slice(0,4).map(t=>`<span>${t}</span>`).join("")}</div>
       <div class="more-link">${lang==='uz'?"Batafsil →":"View details →"}</div>
